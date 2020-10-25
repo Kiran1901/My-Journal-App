@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scroll_view"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold|italic"
+                android:text="Date wise Account Entries Chart" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+
+                <com.google.android.material.textfield.TextInputLayout
+                    app:boxStrokeColor="@color/colorAccent"
+                    android:hint="from"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:startIconDrawable="@drawable/ic_calendar_28"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1" >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/start_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:editable="false"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    app:boxStrokeColor="@color/colorAccent"
+                    android:hint="to"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:startIconDrawable="@drawable/ic_calendar_28"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1" >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/end_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:editable="false"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50dp"
+                android:layout_gravity="right"
+                android:text="Draw">
+            </com.google.android.material.button.MaterialButton>
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/datewiseAccChart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="450dp"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="horizontal"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="30dp"
+                android:textSize="20dp"
+                android:textStyle="bold|italic"
+                android:text="Date wise Expense Entries Chart" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+
+                <com.google.android.material.textfield.TextInputLayout
+                    app:boxStrokeColor="@color/colorAccent"
+                    android:hint="from"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:startIconDrawable="@drawable/ic_calendar_28"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1" >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/start_date_exp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:editable="false"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    app:boxStrokeColor="@color/colorAccent"
+                    android:hint="to"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:startIconDrawable="@drawable/ic_calendar_28"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1" >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/end_date_exp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:editable="false"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/submit_exp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50dp"
+                android:layout_gravity="right"
+                android:text="Draw">
+
+            </com.google.android.material.button.MaterialButton>
+
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/datewiseExpChart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minHeight="450dp" />
+<!--         Person Wise Acc Chart -->
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="30dp"
+                android:textSize="20dp"
+                android:textStyle="bold|italic"
+                android:text="Person wise Account Entries Chart" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+
+                <com.google.android.material.textfield.TextInputLayout
+                    app:boxStrokeColor="@color/colorAccent"
+                    android:hint="from"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:startIconDrawable="@drawable/ic_calendar_28"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1" >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/start_date_person"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:editable="false"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    app:boxStrokeColor="@color/colorAccent"
+                    android:hint="to"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:startIconDrawable="@drawable/ic_calendar_28"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1" >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/end_date_person"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:editable="false"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/submit_person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50dp"
+                android:layout_gravity="right"
+                android:text="Draw">
+
+            </com.google.android.material.button.MaterialButton>
+
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/datewisePersonAccChart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minHeight="450dp" />
+
+<!--          Expense Line Chart    -->
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="30dp"
+                android:textSize="20dp"
+                android:textStyle="bold|italic"
+                android:text="Expense Entries Line Chart" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+
+                <com.google.android.material.textfield.TextInputLayout
+                    app:boxStrokeColor="@color/colorAccent"
+                    android:hint="from"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:startIconDrawable="@drawable/ic_calendar_28"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1" >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/start_date_expense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:editable="false"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    app:boxStrokeColor="@color/colorAccent"
+                    android:hint="to"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:startIconDrawable="@drawable/ic_calendar_28"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1" >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/end_date_expense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:editable="false"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/submit_expense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50dp"
+                android:layout_gravity="right"
+                android:text="Draw">
+
+            </com.google.android.material.button.MaterialButton>
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/expense_chart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minHeight="450dp"/>
+
+
+        </LinearLayout>
+</ScrollView>
